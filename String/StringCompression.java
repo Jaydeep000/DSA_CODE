@@ -2,7 +2,7 @@ package String;
 
 public class StringCompression {
 
-
+//string compression
     public static String sctringComp(String str){
         int n=str.length();
         StringBuilder sb= new StringBuilder();
