@@ -14,7 +14,7 @@ public class copy_constructor {
         //new object
         Student s2 = new Student(s1);
         s2.password = "xyz";
-        s1.marks[2] = 100;
+        s1.marks[2] = 56;
         for (int i = 0; i < 3; i++) {
             System.out.println(s2.marks[i]);
         }
@@ -43,13 +43,13 @@ class Student {
         System.out.println("Constructor is called");
     }
 
-    Student(String name) {//constructor // parameterised Constructor
-        marks = new int[3];
-        this.name = name;
-    }
+    // Student(String name) {//constructor // parameterised Constructor
+    //     marks = new int[3];
+    //     this.name = name;
+    // }
 
-    Student(int roll) {//constructor // parameterised Constructor
-        marks = new int[3];
-        this.roll = roll;
-    }
+    // Student(int roll) {//constructor // parameterised Constructor
+    //     marks = new int[3];
+    //     this.roll = roll;
+    // }
 }
