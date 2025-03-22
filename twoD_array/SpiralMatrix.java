@@ -1,7 +1,7 @@
 package twoD_array;
 import java.util.Scanner;
 
-public class piralMatrix {
+public class SpiralMatrix {
 
     // ✅ Function to print matrix
     public static void printMatrix(int[][] matrix) {
@@ -21,15 +21,37 @@ public class piralMatrix {
         int endCol = matrix[0].length - 1;
 
         System.out.println("Spiral Order:");
-        while(startRow<=endRow && startCol<=endCol){
-            7
+        while (startRow <= endRow && startCol <= endCol) {
+            // Traverse from left to right
+            for (int col = startCol; col <= endCol; col++) {
+                System.out.print(matrix[startRow][col] + " ");
+            }
+            startRow++; // Move down the row
+
+            // Traverse from top to bottom
+            for (int row = startRow; row <= endRow; row++) {
+                System.out.print(matrix[row][endCol] + " ");
+            }
+            endCol--; // Move left the column
+
+            // Traverse from right to left (Check if valid)
+            if (startRow <= endRow) {
+                for (int col = endCol; col >= startCol; col--) {
+                    System.out.print(matrix[endRow][col] + " ");
+                }
+                endRow--; // Move up the row
+            }
+
+            // Traverse from bottom to top (Check if valid)
+            if (startCol <= endCol) {
+                for (int row = endRow; row >= startRow; row--) {
+                    System.out.print(matrix[row][startCol] + " ");
+                }
+                startCol++; // Move right the column
+            }
         }
-       
+        System.out.println(); // Print newline at end
     }
-
-
-
-
 
     // ✅ Main method for input
     public static void main(String[] args) {
