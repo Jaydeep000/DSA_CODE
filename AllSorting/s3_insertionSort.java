@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class s3_insertionSort {
     public static void main(String[] args) {
-        int[] arr={4,6,3,8,9};
+        int[] arr={4,6,3,81,5,2007,2003,8,12,9};
         Arrays.sort(arr);
         // sort(arr);
         printf(arr);
